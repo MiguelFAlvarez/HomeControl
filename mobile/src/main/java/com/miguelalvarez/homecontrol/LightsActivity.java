@@ -25,7 +25,7 @@ public class LightsActivity extends ActionBarActivity {
         clientThread.start();
 
         try {
-            clientThread.join(500);
+            clientThread.join(2000);
         }catch(InterruptedException e){
             e.printStackTrace();
         }
@@ -165,7 +165,7 @@ public class LightsActivity extends ActionBarActivity {
         Thread clientThread = new Thread(client);
         clientThread.start();
         try {
-            clientThread.join(500);
+            clientThread.join(2000);
         }catch(InterruptedException e){
             e.printStackTrace();
         }

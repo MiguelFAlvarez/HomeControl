@@ -30,7 +30,7 @@ public class TCPClient extends Thread {
             InputStream in = clientSocket.getInputStream();
             in.read(receiveData);
 
-            Log.d("TCPClient", "Light1:"+receiveData[10]);
+            Log.d("TCPClient", "Light1:"+receiveData[10]+" Fan status:"+receiveData[1]+" TempMode:"+receiveData[2]);
             clientSocket.close();
         }
         catch(Exception e){

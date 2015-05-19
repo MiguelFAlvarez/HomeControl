@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
         Thread clientThread = new Thread(client);
         clientThread.start();
         try {
-            clientThread.join(500);
+            clientThread.join(2000);
         }catch(InterruptedException e){
             e.printStackTrace();
         }
@@ -81,7 +81,8 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(intent);
                 break;
             case R.id.bTemp:
-
+                Intent intent1 = new Intent(this, TempControl.class);
+                startActivity(intent1);
                 break;
             case R.id.bStatus:
 
@@ -92,7 +93,7 @@ public class MainActivity extends ActionBarActivity {
                 Thread clientThread = new Thread(client);
                 clientThread.start();
                 try {
-                    clientThread.join(500);
+                    clientThread.join(2000);
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }
